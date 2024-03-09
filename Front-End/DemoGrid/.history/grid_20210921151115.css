@@ -1,0 +1,11 @@
+.grid{
+    width: 100%;
+    /* dùng tính chất block để cho những thẻ ko có tính chất block */
+    display: block;
+    padding: 0;
+}
+
+.grid.wide{
+    max-width: 1200px;
+    margin: 0 auto;
+}

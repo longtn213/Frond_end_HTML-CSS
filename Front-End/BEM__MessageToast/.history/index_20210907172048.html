@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>F8 - Shop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+        <div onclick="showErrorToast();" class="btn btn--danger">Show error toast</div>
+    </div>
+    <!-- Success -->
+
+    <script>
+        
+
+        function showSuccessToast() {
+            toast({
+                title: "Thành công!",
+                message: "Bạn đã đăng ký thành công tài khoản .",
+                type: "success",
+                duration: 5000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
+                type: "error",
+                duration: 5000
+            });
+        }
+    </script>
+</body>
+
+</html>

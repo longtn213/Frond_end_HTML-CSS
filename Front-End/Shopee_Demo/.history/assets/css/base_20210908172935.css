@@ -1,0 +1,14 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    /* hack */
+    font-size: 62.5%;
+    /* font-size: 100%; mang về biến rem*/
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,435 @@
+/* ------------------------------ */
+/*---DEFAULT SETUP----------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato',sans-serif;
+    font-size: 20px;
+     color: #2C3531;
+     text-rendering: optimizeLegibility;
+}
+body{
+    overflow-x: hidden;
+    
+}
+/* ----------------------------------- */
+/* -----RESUSABLE COMPONENT------------*/
+h1{
+    font-size: 300%;
+    font-weight: 400;
+    /* khoang cach giua cac tu voi nhau  */
+    word-spacing: 3px;
+    color: cornsilk;
+    /* chinh khoang cach giua cac dong */
+    line-height: 150%;
+    margin-bottom: 70px;
+}
+
+.btn{
+    text-decoration: none;
+    color: cornsilk;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    width: 190px;
+    /* giup chinh duoc width va height van giu duoc thuoc tinh inline */
+    display: inline-block;
+    /* can chu ve giua */
+    text-align: center;
+    /* khi di chuot vao giup hien thi cac thuoc tinh giong nhau  */
+    transition: all .3s;
+}
+.btn:hover,
+.btn:active{
+    background-color: #d35400;
+}
+
+/* clear su an theo thuoc tinh float */
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+h1,h2{
+    text-transform: uppercase;
+    /* khoang cach giua cac chu cai voi nhau  */
+    letter-spacing: 1px;
+
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h2{
+    color: orange;
+    font-size: 180%;
+   font-weight: 700;
+   text-align: center;
+    padding: 50px;
+}
+h2:after{
+    content: " ";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: peachpuff;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.p_long{
+    text-align: center;
+    color: #2C3531;
+    font-size: 22px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+}
+
+section{
+    padding: 50px;
+}
+
+h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #8b9b94;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.small-icon{
+    color: #8a5caf;
+    font-size: 150%;
+    margin-right: 10px;
+}
+/* ----------------------------- */
+/* --------------Header---------------- */
+/* ----------------------------------------------------------------- */
+header{
+    /* linear-gradient fix 2 mau voi nhau cho anh */
+    background-image:linear-gradient( 135deg ,rgba(17,100,102,0.8) 55%, rgba(215, 175, 139,0.85)), url(../img/background4.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    background-attachment: fixed;
+}
+.logo{
+    width: 300px;
+    float: left;
+    margin-left: 50px ;
+    margin-top: -50px;
+    margin-bottom: -100px;
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    margin-right:50px ;
+}
+.main-nav li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: seashell;
+    font-size: 110%;
+    font-weight: 700;
+    transition: border-bottom 0.5s;
+    padding: 5px;
+}
+.main-nav li{
+    display: inline;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 4px solid cornsilk;
+}
+
+.heading-hed{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform:translate(-45%,-55%);
+     width: 1140px; 
+}
+/* ---------Sticky------------------- */
+.sticky{
+    background-color: #123c64;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+.sticky .logo{
+    width: 250px;
+    margin-top: -40px;
+    margin-bottom: -70px;
+}
+.sticky .main-nav{
+    margin-top: 30px;
+}
+
+/* ---------------------------------- */
+/* -----------Mobile Navigation------ */
+/* ---------------------------------- */
+.mobile-nav-icon{
+    font-size: 200%;
+    color: rgb(90, 113, 255);
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    display: none;
+}
+.sticky .mobile-nav-icon{
+    top: 30px;
+}
+/* ---------------------------------- */
+/* -------ABOUT SECTION-------------- */
+/* ---------------------------------- */
+.about-picture{
+    position: relative;
+}
+.about-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border: 4px solid #93dfca;
+    box-shadow: 0px 5px 15px 5px #3dd4ac;
+    /* x y độ mờ-độ phóng rộng-màu  */
+    transition: all 3s;
+
+}
+.picture-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #deebe7;
+    transform:translate(-65%,100%);
+    opacity: 0;
+    /* làm mờ đi  */
+    transition: all 0.5s;
+    /* chỉnh thời gian hiện của class mình mong muốn  */
+}
+.about-picture:hover img,
+.about-picture:active img{
+    filter:brightness(60%) blur(2px);
+    /* Làm mờ chỉnh sáng */
+
+}
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    transform:translate(-65%,-50%);
+    opacity: 1;
+}
+/* ----------------------------- */
+/* ---------PRODUCT SECTION----- */
+/* ----------------------------- */
+.product-section{
+    background-color: #D1E8E2 ;
+}
+.product-box{
+    background-color: #eeefff;
+    box-shadow: 3px 5px 10px #e0e0e0;
+    width: 90%;
+    height: 350px;
+}
+.product-price{
+    color: #265077;
+    font-size: 250%;
+    font-weight: 300;
+    text-align: center;
+}
+.product-price span{
+    font-size: 80%;
+    font-weight: 200;
+}
+.product-box ul li {
+    margin-left: 20%;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product-box .btn{
+    margin-left: 20%;
+}
+/* --------------------------------------- */
+/* --------Testimonial section------------ */
+/* --------------------------------------- */
+.testimonial-section{
+    background-image:linear-gradient( 135deg ,rgba(17,100,102,0.8) 55%, rgba(215, 175, 139,0.85)), url(/recources/img/background2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.testimonial-section h2{
+    margin-bottom: 50px;
+}
+blockquote::before{
+    content: "\201C ";
+    display: block;
+    font-size: 500%;
+    position: absolute;
+    top: -10;
+    left: -10px;
+}
+blockquote{
+    width: 95%;
+    position: relative;
+    font-style: italic;
+    line-height: 140%;
+    color: white;
+}
+cite{
+    display: block;
+    color: #b6cfc4;
+    margin-top: 25px;
+}
+cite img{
+   height: 70px;
+   border-radius: 50%;
+   border: 2px solid 2C3531;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* --------------------------------------- */
+/* ----------------Sponsor Section-------- */
+/* --------------------------------------- */
+.sponsors-section{
+    background-color: rgb(221, 216, 216);
+}
+.sponsors-section h2{
+    margin-bottom: 20px;
+}
+.sponsors-showcase{
+    margin-left: 10%;
+}
+.sponsors-showcase li{
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+figcaption{
+    color: #265077;
+    font-weight: 900;
+    font-size: 120%;
+    cursor: pointer;
+}
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active{
+    transform: scale(1.2);
+}
+.logo-sponsor{
+    width:140px;
+    cursor:pointer;
+    transition: all 2s;
+}
+/* --------------------------------------- */
+/* ----------------Contact Form----------- */
+/* --------------------------------------- */
+
+.contact-section{
+    background-image:linear-gradient( 135deg ,rgba(17,100,102,0.8) 55%, rgba(215, 175, 139,0.85)), url(/recources/img/background5.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.information{
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 50px;
+    font-size: 95%;
+}
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+.social-icon{
+    list-style: none;
+    margin-top: 50px;
+}
+.social-icon li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+}
+.social-icon li i{
+    transition: all 2s;
+}
+.social-icon li i:hover,
+.social-icon li i:active{
+    transform: scale(1.3);
+    color: tomato;
+}
+/* --------------------------------------- */
+/* ----------------Form Contact----------- */
+/* --------------------------------------- */
+form{
+    background-color: rgba(67, 153, 155, 0.8);
+    margin-left: 40%;
+    width: 65%;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+form .row{
+    margin-top: 20px;
+}
+label{
+    font-size: 150%;
+    color: whitesmoke;
+    padding: 20px;
+    
+}
+input,textarea{
+  outline: none;
+  padding: 20px;
+  background-color: rgba(67, 153, 155, 0.8);
+  border: 1px solid rgb(128, 116, 116);
+  margin-left: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+input{
+    height: 50px;
+}
+form .row:last-child{
+    text-align: center;
+}
+input[type=text],input[type=email],textarea{
+    width: 80%;
+    font-size: 100%;
+    transition: all 3s;
+}
+input[type=text]:focus,input[type=email]:focus,textarea:focus{
+    color: white;
+    background-color: rgba(215, 175, 139,0.85);
+}
+input[type =submit]{
+    font-weight: 700;
+    font-size: 100%;
+    border-radius: 5px;
+    width: 50%;
+}
+/* --------------------------------------- */
+/* ----------------FOOTER----------------- */
+/* --------------------------------------- */
+footer{
+    text-align: center;
+    background-color:#494949;
+    color: white;
+    padding: 20px;
+}

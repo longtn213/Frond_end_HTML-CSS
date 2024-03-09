@@ -1,0 +1,148 @@
+*{
+    /*xac dinh tat ca */
+    margin:  0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*de de dang chinh padding va border 
+    tranh mac dinh giup sau nay khi ta sua de dang */
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+h1,h2{
+    color: red;
+}
+h1{
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+h2{
+    font-size:  40px;
+    margin-bottom: 15px;
+}
+.container{
+    width: 1500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding:0 20px;
+}
+.content{
+    width: 75%;
+    float: left;
+}
+input,textareaƠ{
+    display: block;
+}
+input{
+    margin: 20px;
+    width: 300px;
+    padding: 10px 20px;
+}
+textarea{
+    margin: 20px;
+    width: 300px;
+}
+form{
+    width: 25%;
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    display:table;
+    clear: both; 
+}
+
+.avatar_img{
+    border-radius: 50%;
+    /* tao ra mot hinh tron voi hinh elip */
+    width: 100px;
+    height: 100px;
+    float:  left;
+}
+h4{
+    margin-left: 10px;
+    margin-right: 20px;
+    float: left;
+}
+.info{
+    margin-top: 20px;
+}
+.duongdan{
+    margin-left: 200px;
+}
+.date{
+    position:relative;
+    left: 250px;
+}
+
+
+
+/* .heading1{
+    color: blue;
+    font-family: 'Lato', sans-serif;
+
+    the hien duoc su dam nhat cua kie chu 
+
+    
+}
+textarea{
+    display: block;
+}
+h2{
+  color:rgb(0, 150, 150);
+  phoi mau giua red,green,blue
+} 
+h3{
+    color: rgba(0, green, 0, 0.2);
+}
+.heading1{
+    border: 4px solid red;
+    display:  inline;
+    thu nho cai border vua voi text
+    padding: 40px;
+    padding: 50px 0 70px 20px;
+    chia khoang cach cua text voi border */
+     /* margin: 60px;
+    tao khoang cach chia border voi cac element khac
+    background-color: blueviolet;
+    display: block;
+} */
+/* .container{
+    width: 1140px;
+    margin:  0 auto;
+    padding-top: 100px;
+    background-color: palegoldenrod;
+    position: relative;
+}
+.content{
+    background-color: palegoldenrod;
+    width: 75%;
+    float: left;
+}
+.avatar{
+    width:  25%;
+
+    background-color: greenyellow;
+    float: left;
+}
+
+.info{
+    background-color: aquamarine;
+} */
+/* .date {
+    position: relative;   di chuyen xung xanh vi tri ban dau 
+    top: 0;
+    left: 500px;
+  
+     position: fixed; lay moc goc man hinh
+                        keo xuong van giu nguyen
+    top: 0;
+    left: 0;
+  
+    position: absolute; 
+    lay theo position cua element gan nhat
+        top: 0;
+    left: 0;
+    position: sticky;
+}  */

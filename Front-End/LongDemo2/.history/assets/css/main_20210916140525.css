@@ -1,0 +1,32 @@
+.header{
+    
+}
+.header-bar1{
+    height: 100px;
+    background-color: #17B5C0;
+    display: flex;
+}
+
+.header-bar1-logo{
+    margin: auto 0;
+    color: #fff;
+    font-weight: 300;
+}
+.header-bar1-show{
+    line-height: 100px;
+    margin-left: 150px;
+    width: 500px;
+}
+
+.header-bar1-search{
+    padding: 8px 16px;
+}
+
+
+.header-bar1-info{
+
+}
+
+.header-bar1-btn{
+
+}

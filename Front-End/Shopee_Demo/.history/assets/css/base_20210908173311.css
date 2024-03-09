@@ -1,0 +1,25 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+}
+*{
+    /* giúp tất cả các element kế thừa trong html */
+    box-sizing: inherit;
+}
+html{
+    /* hack */
+    font-size: 62.5%;
+    /* font-size: 100%; mang về biến rem*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}

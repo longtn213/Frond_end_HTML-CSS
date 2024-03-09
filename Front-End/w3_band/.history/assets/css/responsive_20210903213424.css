@@ -1,0 +1,17 @@
+/* PC */
+@media (min-width: 1240px) {
+    
+}
+/* Tablet */
+@media (max-width: 1230px) and (min-width:740px) {
+    
+}
+/* Mobile */
+@media (max-width: 740px) {
+    #nav>li {
+        display: block;
+    }
+    #header{
+        overflow: hidden;
+    }
+}

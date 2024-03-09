@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header__img{
+    width: 100%;
+    position: relative;
+}
+.header__navbar{
+    position: absolute;
+    top: 20px;
+    right: 30%;
+}
+.header__menu-list{
+    display: flex;
+    list-style: none;
+}
+.header__menu-item{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}

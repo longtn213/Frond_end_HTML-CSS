@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+
+}
+.table1 {
+    padding: 100px 90px;
+    border: 1px solid #000;
+}
+.table2{
+
+    padding: 500px 450px;
+    border: 1px solid #000;
+}
+.table3{
+    padding: 100px 90px;
+    border: 1px solid #000;
+}

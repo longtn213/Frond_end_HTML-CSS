@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    
+}
+.table1 {
+    width:100%
+    padding: 100px;
+    border: 1px solid #000;
+}
